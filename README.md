@@ -1,12 +1,12 @@
 # pyspark-pytest-allure
 Pyspark + PyTest + Allure Example
 
-## Install
+#### Install
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run test and open Allure Report
+#### Run test and open Allure Report
 ```bash
 nox
 ```
