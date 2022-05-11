@@ -1,0 +1,6 @@
+pyspark
+pandas
+pyarrow
+nox
+pytest
+allure-pytest
