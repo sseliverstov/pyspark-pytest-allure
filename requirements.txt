@@ -1,6 +1,8 @@
 pyspark
 pandas
 pyarrow
+matplotlib
+plotly
 nox
 pytest
 allure-pytest

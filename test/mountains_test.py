@@ -1,7 +1,7 @@
 import pytest
 import allure
 from pyspark.sql.functions import max as spark_max
-from .conftest import attach_table
+from .conftest import attach_table, attach_chart
 
 
 @pytest.fixture(scope='module', autouse=True)
@@ -41,6 +41,7 @@ def test_earth(sql_context, current_planet):
 @allure.epic("Mountains")
 @allure.story("Height")
 @allure.title("Mars is coolest")
-def test_best(sql_context):
-    peak = find_champion(sql_context.table("mountains"))
+def test_best(sql_context, mountains_table):
+    attach_chart(sql_context, "height", "mountains")
+    peak = find_champion(mountains_table)
     assert peak == 21900
